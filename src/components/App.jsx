@@ -1,6 +1,3 @@
-// import { useState, useEffect, useRef } from 'react';
-// import { nanoid } from 'nanoid';
-// import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { ContactForm } from './contactForm/ContactForm';
 import ContactList from './contactList/ContactList';
 import Filter from './filter/Filter';

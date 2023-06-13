@@ -1,6 +1,11 @@
+import PropTypes from 'prop-types';
 import css from './ContactElementList.module.css';
 
-export default function ContactElementList({ name, number, handleClickDelete }) {
+export default function ContactElementList({
+  name,
+  number,
+  handleClickDelete,
+}) {
   return (
     <>
       <p>
@@ -16,3 +21,13 @@ export default function ContactElementList({ name, number, handleClickDelete }) 
     </>
   );
 }
+
+ContactElementList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+  handleClickDelete: PropTypes.func.isRequired,
+};
